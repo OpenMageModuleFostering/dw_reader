@@ -1,0 +1,56 @@
+<!--
+/**
+ * DecryptWeb Reader Extension
+ *
+ * This version may have been modified pursuant
+ * to the GNU General Public License, and as distributed it includes or
+ * is derivative of works licensed under the GNU General Public License or
+ * other free or open source software licenses.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * @category    DW
+ * @package     DW_Reader
+ * @copyright   Copyright (c) 2014 DecryptWeb (http://www.decryptweb.com) All Rights Reserved.
+ * @license     http://www.gnu.org/licenses/gpl-3.0.html  GNU/GPL
+ */
+-->
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<?php if($this->active == 1): ?><!-- if module is enable -->
+<?php $feed_url = $this->getFeedUrl(); ?>	
+	<?php if(isset($feed_url) && !empty($feed_url)): ?>
+		<?php $items = $this->getFeeds($feed_url); ?>
+		<?php if(isset($items) && $items!=false): ?>	
+		<ol>
+			<?php $i=0; ?>
+			<?php foreach ($items as $k => $v): ?>		
+				<li>
+				<?php if($this->show_dt==1): ?>
+					<?php if(!empty($this->dtformat)): ?>
+					<strong><?php echo date($this->dtformat,$v['dt']); ?></strong>
+					<?php else: ?>
+					<strong><?php echo date('d.m.y H:i:s',$v['dt']); ?></strong>
+					<?php endif; ?>
+				<?php endif; ?>
+				<?php if($this->show_links==1): ?>
+					<a href="<?php echo $v['link']; ?>" target="_blank">&nbsp;<?php echo $v['title']; ?></a>
+				<?php else: ?>
+					<?php echo $v['title']; ?>
+				<?php endif; ?>
+				<br/>	
+				<?php if($this->show_desc==1): ?>
+					<?php echo $v['desc']; ?>
+				<?php endif; ?>
+				</li>
+			<?php $i++; ?>
+			<?php endforeach; ?>
+		</ol>	
+		<?php endif; ?>
+	<?php else: ?>
+		<?php echo 'No URL Found'; ?>
+	<?php endif; ?>
+<?php else: ?>
+	<?php /*echo 'DW Feed Reader is disabled';*/ ?>
+<?php endif; ?>

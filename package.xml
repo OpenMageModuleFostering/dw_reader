@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>DW_Reader</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://www.gnu.org/licenses/gpl-3.0.html">GPLv3</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>An extension to display RSS Feed on any page with many configuration settings</summary>
+    <description>DW Reader extension will enable the shop owner to display RSS Feed on any static/dynamic page of the shop together with many configuration settings to choose from.</description>
+    <notes>Recommended for every Magento Installation</notes>
+    <authors><author><name>DecryptWeb Solutions</name><user>dwweb</user><email>contact@decryptweb.com</email></author></authors>
+    <date>2014-02-18</date>
+    <time>10:27:15</time>
+    <contents><target name="magecommunity"><dir name="DW"><dir name="Reader"><dir name="Block"><file name="Reader.php" hash="4d3637924df59d7486c0e256f2d6a9da"/></dir><dir name="Helper"><file name="Data.php" hash="32372cc0eda4dc256f107adb0f2f48bd"/></dir><dir name="Model"><dir name="System"><dir name="Config"><dir name="Source"><file name="Dateformat.php" hash="1a2e41531a4154fac5eae0472de3fc1d"/></dir></dir></dir></dir><dir name="controllers"><file name="IndexController.php" hash="69142165620feeecb38e31ad614ac6bd"/></dir><dir name="etc"><file name="config.xml" hash="2ef223d000791959bfd9d0ee16d265b1"/><file name="system.xml" hash="fc41cb5b42dbe0c594de60229a4f8f96"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="DW_Reader.xml" hash="c7de8a38af720948bd4b9728e5f1dbe6"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="dwreader"><file name="feed.phtml" hash="d38f796222df5c01b1d580f0b72760dd"/></dir></dir><dir name="layout"><file name="dwreader.xml" hash="b5f4779a4c24a08a2b35f1fb558e54c7"/></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.6.0.0</min><max>1.8.1.0</max></package></required></dependencies>
+</package>

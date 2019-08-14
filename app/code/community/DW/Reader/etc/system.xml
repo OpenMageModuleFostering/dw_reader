@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * DecryptWeb Reader Extension
+ *
+ * This version may have been modified pursuant
+ * to the GNU General Public License, and as distributed it includes or
+ * is derivative of works licensed under the GNU General Public License or
+ * other free or open source software licenses.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * @category    DW
+ * @package     DW_Reader
+ * @copyright   Copyright (c) 2014 DecryptWeb (http://www.decryptweb.com) All Rights Reserved.
+ * @license     http://www.gnu.org/licenses/gpl-3.0.html  GNU/GPL
+ */
+-->
+<config>  
+	<tabs>
+        <dwsextension translate="label">
+            <label>DecryptWeb Extensions</label>
+            <sort_order>999</sort_order>
+        </dwsextension>
+    </tabs>     
+    <sections>    	
+        <dw_reader translate="label">
+            <class>separator-top</class>
+            <label>DW Feed Reader</label>
+            <tab>dwsextension</tab>
+            <sort_order>2</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>0</show_in_store>
+                 <groups>
+					<default translate="label">
+						<label>DW Feed Reader Settings</label>
+						<frontend_type>text</frontend_type>
+						<sort_order>50</sort_order>
+						<show_in_default>1</show_in_default>
+						<show_in_website>1</show_in_website>
+						<show_in_store>0</show_in_store>
+						<fields>
+							<active translate="label">
+	                            <label>Enable</label>
+	                            <sort_order>1</sort_order>
+	                            <frontend_type>select</frontend_type>
+	                            <source_model>adminhtml/system_config_source_yesno</source_model>
+	                            <show_in_default>1</show_in_default>
+	                            <show_in_website>1</show_in_website>
+	                            <show_in_store>0</show_in_store>
+								<comment><![CDATA[If set to 'No' RSS feed will not be seen]]></comment>
+	                        </active>		
+	                        <!--<feed_url translate="label comment">
+								<label>RSS Feed URL</label>
+								<frontend_type>text</frontend_type>
+								<validate>validate-url</validate>
+								<sort_order>2</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>0</show_in_store>																							
+							</feed_url>-->												
+							<article_number translate="label comment">
+								<label>Number of Articles</label>
+								<frontend_type>text</frontend_type>
+								<validate>validate-digits required-entry</validate>								
+								<sort_order>3</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>0</show_in_store>
+								<comment><![CDATA[Enter the number of articles to be displayed]]></comment>								
+							</article_number>
+							<show_desc translate="label comment">
+								<label>Show Description</label>
+								<frontend_type>select</frontend_type>
+								<sort_order>4</sort_order>
+								<source_model>adminhtml/system_config_source_yesno</source_model>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>0</show_in_store>		
+								<comment><![CDATA[If set to 'No' description will not be seen in the RSS Feed]]></comment>								
+							</show_desc>														
+							<show_date translate="label comment">
+								<label>Show Date</label>
+	                            <sort_order>5</sort_order>
+	                            <frontend_type>select</frontend_type>
+	                            <source_model>adminhtml/system_config_source_yesno</source_model>
+	                            <show_in_default>1</show_in_default>
+	                            <show_in_website>1</show_in_website>
+	                            <show_in_store>0</show_in_store>	
+								<comment><![CDATA[If set to 'No' date will not be seen in the RSS Feed]]></comment>								
+							</show_date>	
+							<dateformat translate="label comment">
+								<label>Date Format</label>
+	                            <sort_order>6</sort_order>
+	                            <frontend_type>text</frontend_type>
+	                            <!--<source_model>reader/system_config_source_dateformat</source_model>-->
+	                            <show_in_default>1</show_in_default>
+	                            <show_in_website>1</show_in_website>
+	                            <show_in_store>0</show_in_store>		
+								<validate>required-entry</validate>								
+	                            <comment><![CDATA[Format like d.m.Y H:i:s,<br/> where d=date,m-month,Y-full year,H-hours,i=minutes,s-second]]></comment>														
+							</dateformat>	
+							<show_links translate="label comment">
+								<label>Show Links</label>
+	                            <sort_order>7</sort_order>
+	                            <frontend_type>select</frontend_type>
+	                            <source_model>adminhtml/system_config_source_yesno</source_model>
+	                            <show_in_default>1</show_in_default>
+	                            <show_in_website>1</show_in_website>
+	                            <show_in_store>0</show_in_store>		
+								<comment><![CDATA[If set to 'No' feed links will not be enabled in the RSS Feed]]></comment>								
+							</show_links>													
+						</fields>						
+					</default>
+				</groups>
+        </dw_reader>
+    </sections>   
+</config>

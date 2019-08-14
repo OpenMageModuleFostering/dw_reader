@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * DecryptWeb Reader Extension
+ *
+ * This version may have been modified pursuant
+ * to the GNU General Public License, and as distributed it includes or
+ * is derivative of works licensed under the GNU General Public License or
+ * other free or open source software licenses.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * @category    DW
+ * @package     DW_Reader
+ * @copyright   Copyright (c) 2014 DecryptWeb (http://www.decryptweb.com) All Rights Reserved.
+ * @license     http://www.gnu.org/licenses/gpl-3.0.html  GNU/GPL
+ */
+
+-->
+<layout version="0.1.0">	
+	<default>
+        <!--<reference name="footer_links">
+            <action method="addLink" translate="label title" module="reader" ifconfig="dw_reader/default/active"><label>DW Feeds</label><url>dwreader</url><title>DW Feeds</title><prepare>true</prepare></action>
+        </reference>-->
+    </default>    
+    <reader_index_index translate="label"> 
+    	<label>DW Feed Reader</label>
+        <reference name="head">
+            <action method="setTitle" translate="title" module="reader"><title>DW Feed Reader</title></action>
+        </reference>
+    	<reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+            <action method="setHeaderTitle" translate="title" module="reader"><title>DW Feed Reader</title></action>
+        </reference>         	
+    	 <reference name="content">            
+            <block type="reader/reader" name="dwrssfeed" template="dwreader/feed.phtml" />
+        </reference>
+    </reader_index_index>
+</layout> 
