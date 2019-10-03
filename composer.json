@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/DW_Reader",
+    "name": "OpenMageModuleFostering\/DW_Reader",
     "type": "magento-module",
     "license": "GPLv3",
     "homepage": "",
     "description": "An extension to display RSS Feed on any page with many configuration settings",
     "authors": [
-    {
-        "name": "DecryptWeb Solutions",
-        "email": "contact@decryptweb.com"
-    }
-],
+        {
+            "name": "DecryptWeb Solutions",
+            "email": "contact@decryptweb.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
